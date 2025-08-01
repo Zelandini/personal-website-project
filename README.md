@@ -25,4 +25,4 @@ This is my online portfolio, where you can find information about me, my skills,
 
 ## 🖥️ Live Demo
 
-[Visit my website here!](https://zelandini.netify.app) 
+<a href="https://zelandini.netlify.app" target="_blank">Visit the website here!</a>
