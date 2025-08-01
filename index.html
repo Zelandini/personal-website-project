@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <div class="logo">Zelandini</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Zelandini</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()"> About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="./assets/cropped_circle_image.png" alt="Zelandini Profile Picture">
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 class="title">Zelandini</h1>
+                <p class="section__text__p2">Economics & CompSci Student</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/My CV.pdf')">Download CV</button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" alt="My Linkdn profile"
+                    class="icon" onclick="location.href='https:www.linkedin.com/in/zelandini'">
+                    <img src="./assets/github.png" alt="My GitHub profile"
+                    class="icon" onclick="location.href='https://github.com/Zelandini'">
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <p class="section__text__p1">Get To Know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="./assets/cropped_circle_image1.png"
+                    alt="Profile Picture"
+                    class="about-pic" />
+                </div>
+                <div class="about-details-container">
+                    <div class="text-container">
+                        <p>I am a fourth-year Economics and Computer Science student at the University of Auckland, with a strong 
+                            interest in data-driven problem solving, software development, and the intersection of technology and 
+                            economic systems. Throughout my studies, I have developed practical skills in programming, 
+                            econometrics, and statistical analysis, and I am passionate about applying these to real-world challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+            onclick="location.href='./#experience'">
+        </section>
+        <section id="experience">
+            <p class="section__text__p1">Explore My</p>
+            <h1 class="title">Experience</h1>
+          
+            <div class="section-container experience-container">
+              <div class="details-container">
+                <h3>Teaching Assistant Marker</h3>
+                <p class="sub-text">University of Auckland | Feb 2025 – Present</p>
+                <ul>
+                  <li>Supported undergraduate courses including COMPSCI 101 and 130</li>
+                  <li>Marked assignments, providing constructive feedback to aid student learning.</li>
+                  <li>Worked closely with course coordinators to ensure alignment with course objectives and academic standards.</li>
+                </ul>
+              </div>
+              <div class="details-container">
+                <h3>Resident Advisor (RA)</h3>
+                <p class="sub-text">55 Symonds Student Accommodation | Feb 2025 – Present</p>
+                <ul>
+                  <li>Provided pastoral care and academic guidance to residents in a diverse university accommodation setting.</li>
+                  <li>Planned and executed community-building events such as quiz nights, workshops, and wellbeing activities.</li>
+                  <li>Handled incident reports, enforced community standards, and acted as a liaison between students and university services.</li>
+                </ul>
+              </div>
+            </div>
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+            onclick="location.href='./#projects'">
+          </section>
+          <section id="projects">
+            <p class="section__text__p1">My Recent</p>
+            <h1 class="title">Projects</h1>
+          
+            <h2 class="subtitle">Personal Projects</h2>
+            <div class="projects-container">
+              <div class="project-card minimal-card">
+                <img src="./assets/exchange.png" alt="Transfer Music Playlist" class="project-img" />
+                <h3>Transfer Music Playlist</h3>
+                <p>
+                  A full-stack Python web app that allows users to transfer playlists between Spotify, SoundCloud, and Apple Music. Features real-time API integration and an intuitive interface for seamless playlist migration.
+                </p>
+              </div>
+              <div class="project-card minimal-card">
+                <img src="./assets/download.png" alt="SoundCloud & Spotify Playlist Downloader" class="project-img" />
+                <h3>SoundCloud & Spotify Playlist Downloader</h3>
+                <p>
+                  A web application to download entire playlists from SoundCloud or Spotify directly to your device. Handles metadata tagging and supports multiple audio formats. Built with Python, FastAPI, and modern UI frameworks.
+                </p>
+              </div>
+            </div>
+            <h2 class="subtitle">Team Projects</h2>
+            <div class="projects-container">
+              <div class="project-card fancy-card">
+                <img src="./assets/quadnz.png" alt="QuadNZ.com" class="project-img" />
+                <h3>QuadNZ.com</h3>
+                <p>
+                  NOT UNIVERSITY AFFILIATED. A centralized web platform for University of Auckland students to share honest course reviews, discover clubs, and find events all in one place. Built with modern web technologies and a user-first approach to information sharing.
+                </p>
+                <a href="https://quadnz.com" target="_blank" class="project-link">Visit Website</a>
+              </div>
+            </div>
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+            onclick="location.href='./#contact'">
+          </section>
+          <section id="contact">
+            <p class="section__text__p1">Get in Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+              <div class="contact-info-container">
+                <img
+                  src="./assets/email.png"
+                  alt="Email icon"
+                  class="icon contact-icon email-icon"
+                />
+                <p><a href="mailto:examplemail@gmail.com">zelandiniduarte@gmail.com</a></p>
+              </div>
+              <div class="contact-info-container">
+                <img
+                  src="./assets/linkedin.png"
+                  alt="LinkedIn icon"
+                  class="icon contact-icon"
+                />
+                <p><a href="https:www.linkedin.com/in/zelandini" target="_blank">LinkedIn</a></p>
+              </div>
+            </div>
+          </section>
+          <footer>
+            <nav>
+              <div class="nav-links-container">
+                <ul class="nav-links">
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#experience">Experience</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+            <p>Copyright &#169; 2025 Zelandini Guterres. All Rights Reserved.</p>
+          </footer>                                      
+        <script src="script.js"></script>
+    </body>
+</html>
