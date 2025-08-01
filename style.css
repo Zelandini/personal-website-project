@@ -1,36 +1,31 @@
 /* GENERAL */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
 
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: "Poppins", sans-serif;
+}
+
 p {
     color: rgb(85, 85, 85);
 }
 
-/* Transition */
-
-a, 
-.btn {
+/* TRANSITIONS */
+a, .btn {
     transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
-
-nav, 
-.nav-links {
+/* NAVIGATION */
+nav, .nav-links {
     display: flex;
 }
 
@@ -68,7 +63,6 @@ a:hover {
 }
 
 /* HAMBURGER MENU */
-
 #hamburger-nav {
     display: none;
 }
@@ -91,7 +85,7 @@ a:hover {
     width: 100%;
     height: 2px;
     background-color: black;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -102,7 +96,7 @@ a:hover {
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -112,7 +106,7 @@ a:hover {
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -135,34 +129,21 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-    transform: none;
-}
-
-.hamburger-icon span:first-child {
-    opacity: 1;
-}
-.hamburger-icon span:first-child {
-    transform: none;
-}
-
-
 /* SECTIONS */
-
 section {
     padding-top: 4vh;
     height: 96vh;
     margin: 0 10rem;
-    box-sizing: border-box;
     min-height: fit-content;
 }
 
 .section-container {
     display: flex;
+    gap: 4rem;
+    height: 80%;
 }
 
-/*Profile section */
-
+/* PROFILE SECTION */
 #profile {
     display: flex;
     justify-content: center;
@@ -207,15 +188,13 @@ section {
     gap: 1rem;
 }
 
-/* Icon */
-
+/* ICONS */
 .icon {
     cursor: pointer;
     height: 2rem;
 }
 
-/* Buttons */
-
+/* BUTTONS */
 .btn-container {
     display: flex;
     justify-content: center;
@@ -224,14 +203,14 @@ section {
 
 .btn {
     font-weight: 600;
-    transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    transition: all 300ms ease;
 }
 
 .btn-color-2, .btn-color-1 {
-    border: rgb(53, 53, 53) 0.rem solid;
+    border: rgb(53, 53, 53) 0.1rem solid;
 }
 
 .btn-color-2:hover, .btn-color-1:hover {
@@ -245,7 +224,6 @@ section {
 
 .btn-color-1:hover {
     background: rgb(0, 0, 0);
-
 }
 
 .btn-color-2 {
@@ -256,24 +234,15 @@ section {
     border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-    gap: 1rem
-}
-
-/*About Section */
-
+/* ABOUT SECTION */
 #about {
     position: relative;
 }
 
-
-.about-details-container {
-    justify-content: center;
-    flex-direction: column;
-}
-
 .about-details-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-pic {
@@ -286,27 +255,10 @@ section {
     bottom: 2.5rem;
 }
 
-.section-container {
-    gap: 4rem;
-    height: 80%;
-}
-
-.section__pic-container {
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-
-}
- 
-/* Experience section */
-
+/* EXPERIENCE SECTION */
 #experience {
     position: relative;
-    /* max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem; */
 }
-
 
 .experience-container {
     display: flex;
@@ -315,20 +267,19 @@ section {
     gap: 2rem;
     margin-top: 2rem;
     justify-content: space-between;
-    align-items: stretch;        /* Makes cards equal height */
+    align-items: stretch;
 }
-
 
 .details-container {
     background-color: #fff;
     padding: 2rem;
+    padding-bottom: 2.5rem; /* Add or increase this line for more bottom space */
     border-radius: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex: 1 1 420px;           /* Preferred width, cards can shrink/grow */
+    flex: 1 1 420px;
     min-height: 320px;
     max-height: 400px;
-    max-width: 700px;          /* Don't get too wide */
-    box-sizing: border-box;
+    max-width: 700px;
 }
 
 .details-container h3 {
@@ -354,11 +305,11 @@ section {
     line-height: 1.5;
 }
 
-/* Projects */
-
+/* PROJECTS SECTION */
 #projects {
     position: relative;
 }
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -368,14 +319,13 @@ section {
     margin-bottom: 1.5rem;
     margin-left: 0.2rem;
     position: relative;
-  }
-  
-  /* ===== MINIMAL CARD (Personal Projects) ===== */
-  .minimal-card {
+}
+
+/* MINIMAL CARD (Personal Projects) */
+.minimal-card {
     background: transparent;
     border: 2px solid #afafaf;
     border-radius: 2rem;
-    box-shadow: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -383,37 +333,36 @@ section {
     min-height: 340px;
     padding: 1.5rem 1.2rem 1.2rem 1.2rem;
     margin-bottom: 1rem;
-    transition: none;
     cursor: default;
-  }
-  .minimal-card h3 {
+}
+
+.minimal-card h3 {
     font-size: 1.18rem;
     font-weight: 700;
     margin: 0 0 0.7rem 0;
     text-align: center;
-    background: none;
     color: #222;
-  }
-  .minimal-card .project-img {
+}
+
+.minimal-card .project-img {
     width: 85%;
     height: 150px;
     object-fit: scale-down;
     border-radius: 1.2rem;
     margin-bottom: 1.1rem;
-    box-shadow: none;
-  }
-  .minimal-card p {
+}
+
+.minimal-card p {
     font-size: 0.97rem;
     color: #555;
     margin-bottom: 1.2rem;
     text-align: center;
-  }
+}
 
-  
-  /* ===== FANCY CARD (Team Projects) ===== */
-  .fancy-card {
-    background: #f8fafd;                  /* Soft off-white */
-    border: 2px solid #92d1b6;            /* Blue accent border */
+/* FANCY CARD (Team Projects) */
+.fancy-card {
+    background: #f8fafd;
+    border: 2px solid #92d1b6;
     border-radius: 2rem;
     box-shadow: 0 2px 14px rgba(0,0,0,0.08);
     display: flex;
@@ -430,16 +379,15 @@ section {
     cursor: pointer;
     overflow: hidden;
     position: relative;
-  }
-  
-  .fancy-card:hover {
+}
+
+.fancy-card:hover {
     transform: scale(1.045) translateY(-5px);
     box-shadow: 0 12px 36px rgba(30,144,255,0.11), 0 2px 8px rgba(0,0,0,0.08);
-    border-color: #01814b;                /* Accent color on hover */
-  }
-  
-  /* Optional: keep the gradient title or use just color: #222 */
-  .fancy-card h3 {
+    border-color: #01814b;
+}
+
+.fancy-card h3 {
     background: linear-gradient(90deg, #01814b 30%, #4535fc 70%);
     background-size: 200% 200%;
     color: transparent;
@@ -450,12 +398,13 @@ section {
     font-weight: 700;
     margin: 0 0 0.7rem 0;
     text-align: center;
-  }
-  .fancy-card:hover h3 {
+}
+
+.fancy-card:hover h3 {
     background-position: 100% 0;
-  }
-  
-  .fancy-card .project-img {
+}
+
+.fancy-card .project-img {
     width: 85%;
     height: 150px;
     object-fit: scale-down;
@@ -463,19 +412,21 @@ section {
     margin-bottom: 1.1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     transition: filter 0.28s, transform 0.28s;
-  }
-  .fancy-card:hover .project-img {
+}
+
+.fancy-card:hover .project-img {
     filter: brightness(1.08) saturate(1.06);
     transform: translateY(-5px) scale(1.035) rotate(-1deg);
-  }
-  
-  .fancy-card p {
+}
+
+.fancy-card p {
     font-size: 0.97rem;
     color: #555;
     margin-bottom: 1.2rem;
     text-align: center;
-  }
-  .fancy-card .project-link {
+}
+
+.fancy-card .project-link {
     color: #0077cc;
     text-decoration: none;
     font-weight: 600;
@@ -483,14 +434,15 @@ section {
     padding-bottom: 0.08rem;
     transition: color 0.2s, border-bottom 0.2s;
     font-size: 1.05rem;
-  }
-  .fancy-card .project-link:hover {
+}
+
+.fancy-card .project-link:hover {
     color: #ff54b0;
     border-bottom: 1.5px solid #ff54b0;
-  }
-  
-  /* Subtitle for both sections */
-  .subtitle {
+}
+
+/* SUBTITLE */
+.subtitle {
     font-size: 1.45rem;
     font-weight: 700;
     margin: 2.8rem 0 1.1rem 0;
@@ -498,55 +450,52 @@ section {
     color: #253053;
     letter-spacing: 0.2px;
     padding-left: 0.4rem;
-  }
+}
 
-  /* Contact section */
-  
-  #contact {
+/* CONTACT SECTION */
+#contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 70vh;
-  }
-  
-  .contact-info-upper-container {
+}
+
+.contact-info-upper-container {
     display: flex;
     justify-content: center;
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    background: (250, 250, 250);
+    border: rgb(163, 163, 163) 0.1rem solid;
+    background: rgb(250, 250, 250);
     margin: 2rem auto;
     padding: 0.5rem;
-  }
-  
-  .contact-info-container {
+}
+
+.contact-info-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     margin: 1rem;
-  }
-  
-  .contact-info-container p {
+}
+
+.contact-info-container p {
     font-size: larger;
-  }
-  
-  .contact-icon {
+}
+
+.contact-icon {
     cursor: default;
-  }
-  
-  .email-icon {
+}
+
+.email-icon {
     height: 2.5rem;
-  }
+}
 
-  /* FOOTER SECTION */
-
+/* FOOTER */
 footer {
     height: 26vh;
     margin: 0 1rem;
-  }
-  
-  footer p {
+}
+
+footer p {
     text-align: center;
-  }
+}
