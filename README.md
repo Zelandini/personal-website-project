@@ -1,1 +1,28 @@
-Personal website made with html, css and js.
+# Personal Website Portfolio
+
+Welcome to my personal website!  
+This is my online portfolio, where you can find information about me, my skills, experience, and projects.
+
+---
+
+## 🌟 Features
+
+- **About Me** section  
+- Showcase of selected projects with descriptions and links  
+- Detailed experience and skills timeline  
+- Contact form or contact info  
+- Responsive design (works on desktop & mobile)  
+- Smooth animations and modern UI  
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Deployment:** *e.g., Vercel, Netlify, GitHub Pages*  
+
+---
+
+## 🖥️ Live Demo
+
+[Visit my website here!](https://zelandini.netify.app) 
