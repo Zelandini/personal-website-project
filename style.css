@@ -19,6 +19,8 @@ p {
     color: rgb(85, 85, 85);
 }
 
+
+
 /* TRANSITIONS */
 a, .btn {
     transition: all 300ms ease;
@@ -44,7 +46,6 @@ nav {
 a {
     color: black;
     text-decoration: none;
-    text-decoration-color: white;
 }
 
 a:hover {
@@ -151,6 +152,7 @@ section {
     height: 80vh;
 }
 
+
 .section__pic-container {
     display: flex;
     height: 400px;
@@ -180,6 +182,31 @@ section {
     font-size: 3rem;
     text-align: center;
 }
+.name {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: white; /* default solid white */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.name:hover {
+  background: linear-gradient(90deg, white, #11998e, #38ef7d);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 1.5s linear infinite;
+  transform: scale(1.05); /* little zoom for emphasis */
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% }
+  100% { background-position: 200% }
+}
+
 
 #socials-container {
     display: flex;
@@ -217,21 +244,69 @@ section {
     cursor: pointer;
 }
 
-.btn-color-2:hover, .btn-color-1 {
+.btn-color-1, .btn-color-2 {
     background: rgb(53, 53, 53);
     color: white;
 }
 
-.btn-color-1:hover {
+.btn-color-1:hover, .btn-color-2:hover {
     background: rgb(0, 0, 0);
 }
-
-.btn-color-2 {
-    background: none;
+/* Add this to your CSS */
+.section__pic-container img {
+    transition: transform 0.3s ease;
 }
 
-.btn-color-2:hover {
-    border: rgb(255, 255, 255) 0.1rem solid;
+.section__pic-container img:hover {
+    transform: scale(1.05); /* Grows the image by 5% */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+}
+
+
+/* PROFILE SECTION */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    min-height: 85vh;  /* instead of 80vh */
+    margin: 0;
+    padding: 0;
+
+    background-image: url('./assets/background.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Darkening overlay */
+#profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Black overlay with 50% opacity - adjust as needed */
+    z-index: 1; /* Position above the background but below the content */
+}
+/* Improve text visibility on dark background */
+#profile .section__text__p1,
+#profile .title,
+#profile .section__text__p2 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#profile p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Make sure content stays above the overlay */
+#profile .section__pic-container,
+#profile .section__text {
+    position: relative;
+    z-index: 2; /* Position above the darkening overlay */
 }
 
 /* ABOUT SECTION */
@@ -273,9 +348,9 @@ section {
 .details-container {
     background-color: #fff;
     padding: 2rem;
-    padding-bottom: 2.5rem; /* Add or increase this line for more bottom space */
+    padding-bottom: 2.5rem;
     border-radius: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
     flex: 1 1 420px;
     min-height: 320px;
     max-height: 400px;
@@ -324,7 +399,7 @@ section {
 /* MINIMAL CARD (Personal Projects) */
 .minimal-card {
     background: transparent;
-    border: 2px solid #afafaf;
+    border: 2px solid #e0e0e0;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -361,10 +436,9 @@ section {
 
 /* FANCY CARD (Team Projects) */
 .fancy-card {
-    background: #f8fafd;
-    border: 2px solid #92d1b6;
+    background: white;
+    border: 2px solid #e8e8e8;
     border-radius: 2rem;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,36 +446,23 @@ section {
     min-height: 340px;
     padding: 1.5rem 1.2rem 1.2rem 1.2rem;
     margin-bottom: 1rem;
-    transition:
-      transform 0.28s cubic-bezier(.18,.89,.32,1.28),
-      box-shadow 0.28s,
-      border-color 0.28s;
+    transition: transform 0.28s ease, border-color 0.28s;
     cursor: pointer;
     overflow: hidden;
     position: relative;
 }
 
 .fancy-card:hover {
-    transform: scale(1.045) translateY(-5px);
-    box-shadow: 0 12px 36px rgba(30,144,255,0.11), 0 2px 8px rgba(0,0,0,0.08);
-    border-color: #01814b;
+    transform: translateY(-5px);
+    border-color: #ccc;
 }
 
 .fancy-card h3 {
-    background: linear-gradient(90deg, #01814b 30%, #4535fc 70%);
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    transition: background-position 0.5s;
     font-size: 1.18rem;
     font-weight: 700;
     margin: 0 0 0.7rem 0;
     text-align: center;
-}
-
-.fancy-card:hover h3 {
-    background-position: 100% 0;
+    color: #222;
 }
 
 .fancy-card .project-img {
@@ -410,13 +471,11 @@ section {
     object-fit: scale-down;
     border-radius: 1.2rem;
     margin-bottom: 1.1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: filter 0.28s, transform 0.28s;
+    transition: transform 0.28s;
 }
 
 .fancy-card:hover .project-img {
-    filter: brightness(1.08) saturate(1.06);
-    transform: translateY(-5px) scale(1.035) rotate(-1deg);
+    transform: translateY(-5px);
 }
 
 .fancy-card p {
@@ -430,15 +489,14 @@ section {
     color: #0077cc;
     text-decoration: none;
     font-weight: 600;
-    border-bottom: 1.5px solid #0077cc;
+    border-bottom: 1px solid #0077cc;
     padding-bottom: 0.08rem;
-    transition: color 0.2s, border-bottom 0.2s;
+    transition: color 0.2s;
     font-size: 1.05rem;
 }
 
 .fancy-card .project-link:hover {
-    color: #ff54b0;
-    border-bottom: 1.5px solid #ff54b0;
+    color: #005599;
 }
 
 /* SUBTITLE */
@@ -498,4 +556,43 @@ footer {
 
 footer p {
     text-align: center;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 1200px) {
+    section {
+        margin: 0 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #desktop-nav {
+        display: none;
+    }
+    
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 17vh;
+    }
+    
+    section {
+        margin: 0 2rem;
+    }
+    
+    #profile {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .section__pic-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .experience-container,
+    .projects-container {
+        justify-content: center;
+    }
 }
