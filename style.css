@@ -133,9 +133,8 @@ a:hover {
 /* SECTIONS */
 section {
     padding-top: 4vh;
-    height: 96vh;
+    min-height: 96vh; /* Changed from height to min-height */
     margin: 0 10rem;
-    min-height: fit-content;
 }
 
 .section-container {
