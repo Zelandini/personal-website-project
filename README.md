@@ -1,28 +1,18 @@
-# Personal Website Portfolio
+# Zelandini Guterres — Portfolio
 
-Welcome to my personal website!  
-This is my online portfolio, where you can find information about me, my skills, experience, and projects.
+A responsive personal portfolio focused on my software projects, experience and approach to practical problem-solving.
 
----
+## Built with
 
-## 🌟 Features
+- Semantic HTML
+- Modern CSS with responsive layouts
+- Lightweight vanilla JavaScript
+- GitHub Pages / Netlify compatible static hosting
 
-- **About Me** section  
-- Showcase of selected projects with descriptions and links  
-- Detailed experience and skills timeline  
-- Contact form or contact info  
-- Responsive design (works on desktop & mobile)  
-- Smooth animations and modern UI  
+## Run locally
 
----
+Open `index.html` in a browser, or serve the folder with any static file server.
 
-## 🚀 Tech Stack
+## Live site
 
-- **Frontend:** HTML, CSS, JavaScript  
-- **Deployment:** *e.g., Vercel, Netlify, GitHub Pages*  
-
----
-
-## 🖥️ Live Demo
-
-<a href="https://zelandini.netlify.app" target="_blank">Visit the website here!</a>
+[zelandini.netlify.app](https://zelandini.netlify.app)
