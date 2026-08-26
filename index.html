@@ -1,227 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-    <link rel="icon" type="image/png" href="assets/Z_icon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zelandini Guterres — software developer building practical tools with Python, Flask, FastAPI, SQL and AI.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Zelandini Guterres — Software Developer</title>
+  <link rel="icon" type="image/png" href="assets/Z_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav id="desktop-nav">
-            <div class="logo">Zelandini</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">Zelandini</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="./assets/profile-pic-line.png" alt="Zelandini Profile Picture" />
-            </div>
-            <div class="section__text">
-                <p class="section__text__p1">Kia Ora, I'm</p>
-                <h1 class="name">Zelandini</h1>
-                <p class="section__text__p2">Economics & CompSci Student</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('./assets/My CV.pdf')">Download CV</button>
-                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-                </div>
-                <div id="socials-container">
-                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/zelandini'" />
-                    <img src="./assets/github.png" alt="My GitHub profile" class="icon" onclick="location.href='https://github.com/Zelandini'" />
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <p class="section__text__p1">Get To Know More</p>
-            <h1 class="title">About Me</h1>
-            <div class="section-container">
-                <div class="section__pic-container">
-                    <img src="./assets/cropped_circle_image1.png" alt="Profile Picture" class="about-pic" />
-                </div>
-                <div class="about-details-container">
-                    <div class="text-container">
-                        <p>
-                            I am a final year Economics and Computer Science student at the University of Auckland, with a strong 
-                            interest in data-driven problem solving, software development, and the intersection of technology and 
-                            economic systems. Throughout my studies, I have developed practical skills in programming, 
-                            econometrics, and statistical analysis, and I am passionate about applying these to real-world challenges.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-        </section>
-        <section id="experience">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Experience</h1>
-            <div class="section-container experience-container">
-                <div class="details-container">
-                    <h3>Teaching Assistant Marker</h3>
-                    <p class="sub-text">University of Auckland | Feb 2025 – Present</p>
-                    <ul>
-                        <li>Supported undergraduate courses including COMPSCI 101 and 130</li>
-                        <li>Marked assignments, providing constructive feedback to aid student learning.</li>
-                        <li>Worked closely with course coordinators to ensure alignment with course objectives and academic standards.</li>
-                    </ul>
-                </div>
-                <div class="details-container">
-                    <h3>Resident Advisor (RA)</h3>
-                    <p class="sub-text">55 Symonds Student Accommodation | Feb 2025 – Present</p>
-                    <ul>
-                        <li>Provided pastoral care and academic guidance to residents in a diverse university accommodation setting.</li>
-                        <li>Planned and executed community-building events such as quiz nights, workshops, and wellbeing activities.</li>
-                        <li>Handled incident reports, enforced community standards, and acted as a liaison between students and university services.</li>
-                    </ul>
-                </div>
-            </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-        </section>
-        <section id="skills">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Skills</h1>
-            <div class="section-container experience-container">
-                <div class="details-container">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li><strong>Python</strong> – Advanced proficiency with extensive project experience</li>
-                        <li><strong>Java</strong> – Intermediate knowledge for object-oriented programming</li>
-                        <li><strong>C</strong> – Foundational understanding of systems programming</li>
-                    </ul>
-                </div>
-                <div class="details-container">
-                    <h3>Web Development & Databases</h3>
-                    <ul>
-                        <li><strong>HTML/CSS</strong> – Building responsive and accessible web interfaces</li>
-                        <li><strong>Flask</strong> – Developing web applications and RESTful APIs</li>
-                        <li><strong>SQL & Python ORMs</strong> – Database design and efficient data querying</li>
-                    </ul>
-                </div>
-                <div class="details-container">
-                    <h3>Tools & Technologies</h3>
-                    <ul>
-                        <li><strong>Git/GitHub</strong> – Version control and collaborative development</li>
-                        <li><strong>Linux/Command Line</strong> – Strong command-line proficiency for development workflows</li>
-                        <li><strong>pytest</strong> – Writing and maintaining unit tests for reliable code</li>
-                    </ul>
-                </div>
-                <div class="details-container">
-                    <h3>Currently Learning</h3>
-                    <ul>
-                        <li><strong>JavaScript & React</strong> – Building dynamic front-end applications</li>
-                        <li><strong>Docker</strong> – Containerization for deployment</li>
-                        <li><strong>Advanced Algorithms</strong> – Deepening problem-solving skills</li>
-                    </ul>
-                </div>
-            </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-        </section>
-        <section id="projects">
-            <p class="section__text__p1">My Recent</p>
-            <h1 class="title">Projects</h1>
-            <h2 class="subtitle">Personal Projects</h2>
-            <div class="projects-container">
-                <div class="project-card fancy-card">
-                    <img src="./assets/splity_logo.png" alt="Splity logo" class="project-img" />
-                    <h3>Splity</h3>
-                    <p>
-                        Splity is a lightweight Flask-based app for simplifying 
-                        group expense tracking and bill splitting: a Python backend powers 
-                        calculation services that compute total group spending, per-user net balances, 
-                        and personalized recommendations to settle up.                    
-                    </p>
-                    <a href="https://github.com/Zelandini/splity_flask" target="_blank" class="project-link">Visit Website</a>
-                </div>
-                <div class="project-card fancy-card">
-                    <img src="./assets/exchange.png" alt="Transfer Music Playlist" class="project-img" />
-                    <h3>Transfer Music Playlist</h3>
-                    <p>
-                        As a DJ, I often switch between streaming platforms so I built this tool to transfer my playlists between Spotify, 
-                        SoundCloud, and Apple Music. It’s a personal 
-                        full-stack Python web app with real-time API integration and a clean interface, designed to streamline my own music workflow.
-                    </p>
-                </div>
-                <div class="project-card fancy-card">
-                    <img src="./assets/download.png" alt="SoundCloud & Spotify Playlist Downloader" class="project-img" />
-                    <h3>SoundCloud & Spotify Playlist Downloader</h3>
-                    <p>
-                        As a DJ, I built this web application to help me prepare my sets. It downloads full playlists from 
-                        SoundCloud or Spotify to my device, supports multiple audio formats, and automatically tags track metadata. 
-                        The modern, responsive interface makes it easy to use whenever I’m getting ready to play.
-                    </p>
-                </div>
-            </div>
-            <h2 class="subtitle">Team Projects</h2>
-            <div class="projects-container">
-                <div class="project-card fancy-card">
-                    <img src="./assets/quadnz.png" alt="QuadNZ.com" class="project-img" />
-                    <h3>QuadNZ.com</h3>
-                    <p>
-                        NOT UNIVERSITY AFFILIATED. A centralized web platform for University of Auckland students to share honest course reviews, discover clubs, and find events all in one place. Built with modern web technologies and a user-first approach to information sharing.
-                    </p>
-                    <a href="https://quadnz.com" target="_blank" class="project-link">Visit Website</a>
-                </div>
-                <div class="project-card fancy-card">
-                    <img src="./assets/Recipe Portal logo.png" alt="Recipe portal" class="project-img" />
-                    <h3>Recipe Portal</h3>
-                    <p>
-                        A collaborative web application developed as part of a university project CS 235 - Software Devolpment Methodologies, designed to allow users to share and discover recipes. The platform features user authentication, recipe submission, and a search functionality to find recipes based on ingredients or cuisine type.
-                    </p>
-                    <a href="https://github.com/UoA-CS-Sindhwani-CS235-S2-2025/cs235-s2-2025-recipeswebapp-eejl439-zgut060-cdol502" target="_blank" class="project-link">Visit Website</a>
-                </div>
-            </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-        </section>
-        <section id="contact">
-            <p class="section__text__p1">Get in Touch</p>
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-info-upper-container">
-                <div class="contact-info-container">
-                    <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-                    <p><a href="mailto:zelandiniduarte@gmail.com">zelandiniduarte@gmail.com</a></p>
-                </div>
-                <div class="contact-info-container">
-                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                    <p><a href="https://www.linkedin.com/in/zelandini" target="_blank">LinkedIn</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </footer>
-    <script src="script.js"></script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Zelandini, home"><span>ZG</span> Zelandini</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a>
+        <a class="nav-cta" href="mailto:zelandiniduarte@gmail.com">Let’s talk</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Auckland, New Zealand · Open to graduate roles</p>
+        <h1>I build software that makes messy work <em>simple.</em></h1>
+        <p class="hero-intro">I’m Zelandini, a final-year Computer Science and Economics student who turns real operational problems into useful, dependable products.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="button secondary" href="assets/My CV.pdf" target="_blank" rel="noopener">View résumé</a>
+        </div>
+        <div class="social-row"><a href="https://github.com/Zelandini" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/zelandini" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      </div>
+      <div class="hero-visual reveal" aria-label="Profile portrait">
+        <div class="portrait-frame"><img src="assets/profile-pic-line.png" alt="Portrait of Zelandini Guterres"></div>
+        <div class="code-card"><span>Current focus</span><strong>Python · APIs · AI workflows</strong></div>
+      </div>
+    </section>
+
+    <section class="proof"><div class="shell proof-grid"><div><strong>5+</strong><span>software projects</span></div><div><strong>3</strong><span>courses taught or marked</span></div><div><strong>300+</strong><span>residents supported</span></div><p>Technical thinking, grounded in people.</p></div></section>
+
+    <section class="section shell" id="work">
+      <div class="section-heading reveal"><div><p class="eyebrow">Selected work</p><h2>Built from real problems.</h2></div><p>Projects where I owned the problem, designed the workflow and shipped a working solution.</p></div>
+      <div class="work-grid">
+        <article class="project featured reveal"><div class="project-number">01</div><div class="project-body"><div class="tag-row"><span>Python</span><span>Gemini Vision</span><span>pandas</span><span>RapidFuzz</span></div><h3>RA Parcel Scanner</h3><p>An image-to-resident matching workflow that reads parcel labels, normalises imperfect OCR output and fuzzy-matches recipients against a resident dataset. It separates confident matches from uncertain cases so people stay in control.</p><ul><li>Handles mixed image formats and inconsistent address formats</li><li>Designed around privacy, temporary files and human review</li></ul><a href="https://github.com/Zelandini/RA-parcel-scanner" target="_blank" rel="noopener">View source on GitHub ↗</a></div><div class="project-art parcel-art" aria-hidden="true"><div class="label"><span>TO</span><b>RESIDENT MATCH</b><i>Confidence 94%</i></div></div></article>
+        <article class="project reveal"><div class="project-number">02</div><div class="project-body"><div class="tag-row"><span>Flask</span><span>SQLAlchemy</span><span>Python</span></div><h3>Splity</h3><p>A group expense app that calculates balances and recommends a smaller set of payments to settle up clearly.</p><a href="https://github.com/Zelandini/Splity_flask-2.0" target="_blank" rel="noopener">View source ↗</a></div></article>
+        <article class="project reveal"><div class="project-number">03</div><div class="project-body"><div class="tag-row"><span>FastAPI</span><span>OAuth</span><span>External APIs</span></div><h3>Playlist Downloader</h3><p>A music workflow tool integrating Spotify and SoundCloud, with metadata handling and fallbacks for unavailable tracks.</p><a href="https://github.com/Zelandini" target="_blank" rel="noopener">Explore GitHub ↗</a></div></article>
+        <article class="project reveal"><div class="project-number">04</div><div class="project-body"><div class="tag-row"><span>React</span><span>3D</span><span>Team project</span></div><h3>Interactive Heart Simulator</h3><p>A University of Auckland capstone with ABI, making heart mechanics more understandable through interactive comparison and exploration.</p><span class="quiet-link">In development · 2026</span></div></article>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">Experience</p><h2>Where code meets responsibility.</h2></div></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-date">2025—Now</div><div><h3>Teaching Assistant & Marker</h3><p class="company">University of Auckland · COMPSCI 101, 130 & 230</p><p>Support students learning programming and software development, assess technical work, and give feedback that makes complex ideas easier to understand.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2025—Now</div><div><h3>Resident Advisor</h3><p class="company">University of Auckland Accommodation</p><p>Support a diverse residential community, respond calmly to welfare and operational issues, and build small tools that improve repetitive accommodation workflows.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2025—2026</div><div><h3>Intern</h3><p class="company">Ministry of Foreign Affairs & Cooperation · Timor-Leste</p><p>Contributed to ASEAN-focused workshops, briefings and coordination—experience that strengthened my communication across technical, policy and cultural contexts.</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="section shell about" id="about"><div class="about-copy reveal"><p class="eyebrow">A little more about me</p><h2>Curious across disciplines. Practical by instinct.</h2><p>I study Computer Science and Economics because I’m interested in both how systems are built and how people behave inside them. My best work starts by listening closely, finding the friction, then building the smallest useful solution.</p><p>Outside code, I’m a DJ, a student mentor, and someone who enjoys bringing people together.</p></div><div class="skills reveal"><p class="skills-title">Tools I work with</p><div class="skill-cloud"><span>Python</span><span>Flask</span><span>FastAPI</span><span>SQL</span><span>PostgreSQL</span><span>JavaScript</span><span>React</span><span>Git</span><span>pytest</span><span>REST APIs</span><span>pandas</span><span>AI integration</span></div></div></section>
+
+    <section class="contact"><div class="shell contact-inner reveal"><p class="eyebrow">What’s next?</p><h2>Have a problem worth solving?</h2><p>I’m looking for graduate software, data and technology opportunities where I can keep learning and ship useful work.</p><a class="button light" href="mailto:zelandiniduarte@gmail.com">zelandiniduarte@gmail.com ↗</a></div></section>
+  </main>
+  <footer class="footer shell"><span>© <span id="year"></span> Zelandini Guterres</span><span>Designed and built with care in Auckland.</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
 </body>
 </html>
